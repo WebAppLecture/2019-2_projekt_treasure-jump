@@ -1,0 +1,76 @@
+.GameWindow {
+    padding: 0;
+    border: 10px;
+    margin: auto;
+    display: block;
+    border-color: rgb(8, 73, 8);
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 5px inset rgb(9, 35, 82);
+    background-image:  url("../Source/CloudsBack.png");
+    background-size: contain;
+}
+.LevelEditor {
+    padding: 0;
+    border: 10px;
+    margin: auto;
+    display: inline;
+    border-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 10%;
+    right: 10%;
+    border: 5px outset rgb(255, 255, 255);
+    background-size: auto;
+    overflow: scroll;
+    background-color: aliceblue;
+   
+
+}
+
+.BodyStyle {
+    color: rgb(98, 177, 74);
+    background-color: rgb(53, 48, 48);
+    
+
+}
+
+.StopWatch{
+    font-size: 30pt;
+    color: rgb(235, 219, 212);
+    padding: 10px;
+	overflow: hidden;
+	display: inline-block;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+.TitleScreen{
+    font-size: 30pt;
+    color: rgb(201, 211, 230);
+    position:absolute;
+    top: 10%;
+    left: 45%;
+}
+
+.InfoPage{
+    text-align: center;
+    
+}
+.Inputfile {
+    
+    color: rgb(201, 211, 230);
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+    position: absolute;
+  z-index: -1;
+
+}

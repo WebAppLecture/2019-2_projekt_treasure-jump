@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <header> 
+        <title>JS/CSS Kurs</title> 
+        <link rel="stylesheet" href="/CSS/Header.css">
+            <ul class="Header">
+               <a class="active" href="./Main.html">  Game </a>
+               <a href="./Level_Editor.html"> Level Editor</a>
+               <a href="./Info.html"> GameInfo </a>
+            </ul>
+    </header>
+    <div>
+        <head>
+        <audio src="./Source/Sound/Jump 4 - Sound effects Pack 2.mp3" preload="auto" id="JumpSound">
+        <audio src="./Source/Sound/Jump 9 - Sound effects Pack 2.mp3" preload="auto" id="WallJumpSound">
+        <audio src="./Source/Sound/Powerup 4 - Sound effects Pack 2.mp3" preload="auto" id="WinSound">
+        <audio src="./Source/Sound/Hit 3 - Sound effects Pack 2.mp3" preload="auto" id="DeathSound">
+
+        </audio>
+        </head>
+    </div>
+
+    <link rel="stylesheet" href="/CSS/Game.css">
+   
+
+   
+    <body class="BodyStyle"> 
+           
+        
+        
+        <canvas class = "GameWindow" id="GameWindow" >
+        </canvas>
+        
+            <div class="TitleScreen">
+            <button id="StartGame">Start</button>
+            <input type="file" id="LoadLevel"></button>
+           
+        </div>
+
+        <div id="timer" class="StopWatch">
+            </div>
+        
+            <script>
+                    import("./Javascript/Game.js")
+                        .then(module => window.Game = module.default)
+                        .then(() => {window.game = new Game();});
+            </script>
+
+    </body>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<header title="Level Editor" > </header>
+<header> 
+        <title>JS/Html/CSS Kurs</title> 
+        <link rel="stylesheet" href="../CSS/Header.css">
+            <ul class="Header">
+               <a href="../Main.html">  Game </a>
+               <a class="active" href="./Level_Editor.html"> Level Editor</a>
+               <a href="./Info.html"> GameInfo </a>
+            </ul>
+    </header>
+
+<link rel="stylesheet" href="../CSS/Game.css">
+
+<body class="BodyStyle"> 
+   
+           
+        <div>
+            <input type="image" src="./Source/Symbols/TopLeft.png" id="TopLeft">
+            <input type="image" src="./Source/Symbols/TopMiddle.png" id="TopMiddle">
+            <input type="image" src="./Source/Symbols/TopRight.png" id="TopRight">
+            <br>
+            <input type="image" src="./Source/Symbols/MiddleLeft.png" id="MiddleLeft">
+            <input type="image" src="./Source/Symbols/Middle.png" id="Middle">
+            <input type="image" src="./Source/Symbols/MiddleRight.png" id="MiddleRight">
+            <br>
+            <input type="image" src="./Source/Symbols/BottomLeft.png" id="BottomLeft">
+            <input type="image" src="./Source/Symbols/BottomMiddle.png" width="40" height="45" id="BottomMiddle">
+            <input type="image" src="./Source/Symbols/BottomRight.png" id="BottomRight">
+            <br>
+            <input type="image" src="./Source/Symbols/TopMiddle2.png" id="TopMiddle2">
+            <input type="image" src="./Source/Symbols/Middle2.png" id="Middle2">
+            <input type="image" src="./Source/Symbols/MiddleBlack.png" id="MiddleBlack">
+            <br>
+            <input type="image" src="./Source/Symbols/Spikes.png" id="Spikes">
+            <input type="image" src="./Source/Symbols/Player.png" id="Player">
+            <input type="image" src="./Source/Symbols/Treasure.bmp" id="Treasure">
+
+
+        </div>    
+            
+            
+            <canvas class="LevelEditor" id="LevelEditor" width="400" height="300">
+            </canvas>   
+           
+                   
+        
+    
+    
+    <script>
+        import("../Javascript/LevelEditor.js")
+            .then(module => window.LevelEditor = module.default)
+            .then(() => {window.leveleditor = new LevelEditor();});
+    </script> 
+    
+    <nav>
+        <ul>
+            <li><button id="WhiteButton"> Eraser </button></li>
+            <li><button id="ClearButton"> Clear </button></li>
+            <li><input type="number" id="GridSize" name="GridSize" min="10" max="50" step="5" value="30"></li>
+            <li><input type="number" id="Canvaswidth" name="Width" min="500" max="10000" step="250" value="500"></li>
+            <li><input type="number" id="Canvasheight" name="Height" min="500" max="5000" step="250" value="500"></li>
+        </ul>
+    </nav>
+    
+    <nav>
+            <li><input id="loadFile" type="file" accept=".txt" multiple="false"></li>  
+            <li><button id="saveFile"> Download </button></li>
+    </nav>
+
+
+</body>
